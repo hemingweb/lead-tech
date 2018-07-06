@@ -1,0 +1,22 @@
+<div class="lt-section lt-position-relative">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="lt-section-down-arrow">
+        <polygon fill="#ee5057" points="0,0  100,0  50,60"></polygon>
+    </svg>
+    <div class="container lt-pt-5 lt-pb-4">
+        <div class="row text-center">
+            {% for post in site.posts %}
+
+            <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 lt-article">
+                <i class="fa lt-fa-6x fa-legal lt-color-primary lt-margin-b-20"></i>
+                <h3 class="lt-color-primary lt-article-title-1">{{ post.title }}</h3>
+                <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+                <p>  {{ post.excerpt }}</p>
+                <a href="/lead-tech{{post.url }}" class="text-uppercase lt-color-primary lt-font-semibold">Continue reading...</a>
+            </article>
+            {% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>

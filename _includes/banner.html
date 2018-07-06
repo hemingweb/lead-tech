@@ -1,0 +1,31 @@
+{% if page.url == "/" %}
+    <div class="lt-section lt-bg-img" id="lt-section-1" style="  background-image: url('{{ "/assets/img/bg-img-1.jpg" | absolute_url }}')">
+{% else %}
+    <div class="lt-section lt-bg-img" id="lt-section-1" style="  background-image: url('../assets/img/{{ page.image }}');">
+{% endif %}
+    <div class="lt-logo">
+        <a href="/lead-tech/">
+             <img src="{{ '/assets/img/logo_lead-tech.svg' | absolute_url }}" alt="">
+
+        </a>
+    </div>
+    <div class="col text-center">
+
+            {% if page.url == "/" %}
+             <h2 class="lt-section-title">
+                 We are here to help you?
+             </h2>
+                <p class="lt-color-white lt-section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas risus in diam facilisis</p>
+                <a href="#" class="lt-color-white lt-btn-white-bordered" id="ltForm">Get in touch</a>
+            {% else %}
+                <h2 class="lt-section-title">
+                    {{ page.title }}
+                    <p class="lt-color-white lt-section-subtitle">{{page.featured_text}}</p>
+
+                </h2>
+
+            {% endif %}
+
+    </div>
+
+</div>

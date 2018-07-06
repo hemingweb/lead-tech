@@ -1,0 +1,20 @@
+<div class="lt-parag">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col text-center">
+                {% for page in site.pages %}
+                {% if page.title == 'About' %}
+
+
+                <h2 class="lt-black-title">
+                    {{ page.title }}
+                </h2>
+                <p class="lt-section-subtitle"> {{ page.content }} </p>
+                <a href="/lead-tech{{ page.url }}" class=" lt-btn-red-bordered">Read more</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
